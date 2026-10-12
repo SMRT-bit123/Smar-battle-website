@@ -1,1 +1,1 @@
-# Smar-battle-website
+# Smart-battle-website
