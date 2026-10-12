@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SMART BATTLE - INDIA BEST Gaming Tournament App</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #070914;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background: rgba(8, 10, 25, 0.95);
+    border-bottom: 1px solid #242942;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00d9ff;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at top, #18215c 0%, #070914 55%);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.badge {
+    display: inline-block;
+    background: #151c3d;
+    border: 1px solid #343e78;
+    color: #00d9ff;
+    padding: 7px 14px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #00d9ff;
+}
+
+.hero p {
+    color: #b9bfd5;
+    font-size: 18px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 6px;
+}
+
+.primary {
+    background: linear-gradient(135deg, #6a00ff, #00c6ff);
+    color: white;
+}
+
+.secondary {
+    border: 1px solid #39405d;
+    color: white;
+}
+
+section {
+    padding: 70px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: #9299b2;
+}
+
+.about {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+    color: #c7cbda;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #111526;
+    border: 1px solid #252b42;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.card .icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #969db5;
+    font-size: 14px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.step {
+    text-align: center;
+    background: #111526;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #252b42;
+}
+
+.number {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: auto auto 15px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6a00ff, #00c6ff);
+    font-weight: bold;
+}
+
+.download {
+    text-align: center;
+    background: linear-gradient(135deg, #111a42, #101326);
+}
+
+.download p {
+    color: #aeb4c8;
+    margin: 10px auto 25px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #6a00ff, #00c6ff);
+    color: white;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.faq {
+    max-width: 800px;
+    margin: auto;
+}
+
+details {
+    background: #111526;
+    border: 1px solid #252b42;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    padding: 17px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details p {
+    color: #9da4bb;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #05060d;
+    border-top: 1px solid #20243a;
+    color: #777f99;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #9ca4c0;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+@media (max-width: 600px) {
+
+    .nav a {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">⚡ SMART BATTLE</div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#how">How It Works</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            🎮 FREE GAMING TOURNAMENT APP
+        </div>
+
+        <h1>
+            Welcome to <span>SMART BATTLE</span>
+        </h1>
+
+        <p>
+            Join free gaming tournaments, register for matches,
+            check match details, follow results and enjoy competitive
+            gaming with a simple and powerful app.
+        </p>
+
+        <div class="buttons">
+
+            <!-- Connect the real APK link here later -->
+            <a href="#" class="btn primary">
+                📱 Download APK
+            </a>
+
+            <a href="#features" class="btn secondary">
+                Explore Features
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About SMART BATTLE</h2>
+            <p>Your gaming tournament companion</p>
+        </div>
+
+        <div class="about">
+
+            <p>
+                SMART BATTLE is designed to make tournament
+                participation simple. Players can discover matches,
+                register with their gaming details, view schedules,
+                receive match information and check published results.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section id="features">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>⚡ Features</h2>
+            <p>Everything you need in one place</p>
+        </div>
+
+        <div class="features">
+
+            <div class="card">
+                <div class="icon">🏆</div>
+                <h3>Free Tournaments</h3>
+                <p>
+                    Discover and register for available free matches.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎮</div>
+                <h3>Match Registration</h3>
+                <p>
+                    Register your in-game name and Free Fire UID.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔐</div>
+                <h3>Match Information</h3>
+                <p>
+                    View important match details and instructions.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Results</h3>
+                <p>
+                    Check published match results and rankings.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔔</div>
+                <h3>Notifications</h3>
+                <p>
+                    Stay updated about important tournament announcements.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">👤</div>
+                <h3>Player Profile</h3>
+                <p>
+                    Manage your player information from your profile.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section id="how">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>🎯 How It Works</h2>
+            <p>Start playing in a few simple steps</p>
+        </div>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="number">1</div>
+                <h3>Download</h3>
+                <p>Download the SMART BATTLE app.</p>
+            </div>
+
+            <div class="step">
+                <div class="number">2</div>
+                <h3>Sign Up</h3>
+                <p>Create your player account.</p>
+            </div>
+
+            <div class="step">
+                <div class="number">3</div>
+                <h3>Choose Match</h3>
+                <p>Find a tournament you want to join.</p>
+            </div>
+
+            <div class="step">
+                <div class="number">4</div>
+                <h3>Register</h3>
+                <p>Submit your gaming details.</p>
+            </div>
+
+            <div class="step">
+                <div class="number">5</div>
+                <h3>Play & Check Results</h3>
+                <p>Play your match and check published results.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DOWNLOAD -->
+
+<section class="download">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>📱 Get SMART BATTLE</h2>
+            <p>
+                Download the Android app and start exploring
+                free tournaments.
+            </p>
+        </div>
+
+        <!-- Replace # with actual APK link later -->
+
+        <a href="#" class="download-btn">
+            ⬇️ DOWNLOAD APK
+        </a>
+
+        <p style="margin-top:15px;">
+            Android app • Version 1.0
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>❓ FAQ</h2>
+            <p>Frequently asked questions</p>
+        </div>
+
+        <div class="faq">
+
+            <details>
+                <summary>What is SMART BATTLE?</summary>
+                <p>
+                    SMART BATTLE is a gaming tournament platform
+                    for discovering and joining free matches.
+                </p>
+            </details>
+
+            <details>
+                <summary>Is the app free to download?</summary>
+                <p>
+                    The SMART BATTLE app is intended to be available
+                    as a free download.
+                </p>
+            </details>
+
+            <details>
+                <summary>How do I join a match?</summary>
+                <p>
+                    Download the app, create an account, choose an
+                    available match and complete registration.
+                </p>
+            </details>
+
+            <details>
+                <summary>Where can I see match results?</summary>
+                <p>
+                    Published results can be viewed through the
+                    SMART BATTLE app.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div>
+        © 2026 SMART BATTLE. All rights reserved.
+    </div>
+
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+    </div>
+
+</footer>
+
+</body>
+</html>
